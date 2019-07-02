@@ -1,2 +1,2 @@
-# excersise
-Programming excersises
+# exercise
+Programming exercises

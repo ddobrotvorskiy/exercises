@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>edu.byu.hbll</groupId>
+    <artifactId>java-pom</artifactId>
+    <version>1.5.3</version>
+  </parent>
+
+  <groupId>my.excersise</groupId>
+  <artifactId>excersise</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>Programming excersises in Java</description>
+  <url>https://bitbucket.org/byuhbll/excersise</url>
+  
+  <scm>
+    <connection>scm:git:git://bitbucket.org/byuhbll/excersise.git</connection>
+    <developerConnection>scm:git:ssh://bitbucket.org:byuhbll/excersise.git</developerConnection>
+    <url>https://bitbucket.org/byuhbll/excersise</url>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.8</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>

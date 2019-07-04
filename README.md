@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/ddobrotvorskiy/exercises.svg?branch=master)](https://travis-ci.com/ddobrotvorskiy/exercises)
+[![Build Status](https://travis-ci.org/ddobrotvorskiy/exercises.svg?branch=master)](https://travis-ci.org/ddobrotvorskiy/exercises)
 
 # exercises
 Programming exercises

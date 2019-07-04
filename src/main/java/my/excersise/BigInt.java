@@ -64,11 +64,13 @@ public class BigInt {
 		int maxValue = (int) Math.pow(10, DIGIT_10_MAX_LENGTH);
 		int n = Integer.max(b.digits.length, digits.length);
 		int[] buff = new int[ Integer.max(b.digits.length, digits.length) << 1 ];
-		int addition = 0;			
+		int addition = 0;
 		for (int i = 0; i < digits.length; i++) {
 			int x = digits[digits.length - i - 1];
 			for (int j = 0; j < b.digits.length; j++ ) {
 				int y = b.digits[b.digits.length - j - 1];
+
+				// check if integer overflow can happen here
 				int sum = addition + x * y + buff[buff.length - (i + j) - 1];
 				buff[buff.length - (i + j) - 1] = sum % maxValue;
 				addition = sum / maxValue;
@@ -86,11 +88,11 @@ public class BigInt {
 		int highestDigitIdx = -1;
 		while (++highestDigitIdx < buff.length && buff[highestDigitIdx] == 0) {};
 		int expectedSize = nearestPow2(buff.length - highestDigitIdx);
-		System.out.println("highestDigitIdx="+highestDigitIdx+" buff="+Arrays.toString(buff)+ " expectedSize=" + expectedSize);
+		// System.out.println("highestDigitIdx="+highestDigitIdx+" buff="+Arrays.toString(buff)+ " expectedSize=" + expectedSize);
 		if (buff.length > expectedSize) {
 			int[] buff1 = new int[expectedSize];
 			System.arraycopy(buff, buff.length - expectedSize, buff1, 0, expectedSize);
-			System.out.println("buff1="+Arrays.toString(buff1));
+			// System.out.println("buff1="+Arrays.toString(buff1));
 			return new BigInt(buff1);
 		}
 		return new BigInt(buff);
